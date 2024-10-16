@@ -41,6 +41,25 @@ This project is a website for Little Lemon, a family-owned Mediterranean restaur
 
 5. Open your browser and visit `http://localhost:5173` to view the website.
 
-## Running Tests
+## Test Coverage
 
-To run the unit tests, use the following command:
+The tests cover the following aspects of the ReservationForm component:
+
+1. Rendering: Ensures that all required form fields are present.
+2. Validation: Checks that the form properly validates empty fields and invalid input.
+3. Submission: Verifies that the form can be submitted with valid data.
+4. Error Handling: Tests the display of error messages when API calls fail.
+5. Guest Number Validation: Ensures that the number of guests is validated correctly.
+
+### Test File Structure
+
+The main test file for the ReservationForm component is:
+
+- `src/components/ReservationForm.test.jsx`
+
+This file contains multiple test cases that cover various scenarios and functionalities of the ReservationForm component.
+
+To run the tests, use the following command:
+```
+npm run test
+```
