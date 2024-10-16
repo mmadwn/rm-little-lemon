@@ -1,0 +1,16 @@
+.reservation-list {
+  list-style: none;
+  padding: 0;
+}
+
+.reservation-item {
+  background-color: var(--secondary-peach);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.reservation-item:hover {
+  transform: translateY(-3px);
+}

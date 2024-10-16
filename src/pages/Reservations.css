@@ -1,0 +1,29 @@
+.reservations {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.reservations-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.reservation-form-container,
+.reservation-list-container {
+  flex: 1;
+  background-color: var(--highlight-light);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .reservations-container {
+    flex-direction: column;
+  }
+}

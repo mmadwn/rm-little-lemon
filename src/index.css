@@ -1,11 +1,18 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --primary-green: #495E57;
+  --primary-yellow: #F4CE14;
+  --secondary-salmon: #EE9972;
+  --secondary-peach: #FBDABB;
+  --highlight-light: #EDEFEE;
+  --highlight-dark: #333333;
+
+  font-family: 'Karla', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--highlight-dark);
+  background-color: var(--highlight-light);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,44 +32,152 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Markazi Text', serif;
+  margin: 0;
+}
+
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 64pt;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 40pt;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 18pt;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16pt;
+  line-height: 1.5;
+}
+
+.lead-text {
+  font-size: 18pt;
+  line-height: 1.5;
+}
+
+.section-title {
+  font-size: 20pt;
+  font-weight: 800;
+}
+
+.card-title {
+  font-size: 18pt;
+  font-weight: 700;
+}
+
+.highlight-text {
+  font-size: 16pt;
+  font-weight: 500;
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 16px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: 16pt;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--primary-yellow);
+  color: var(--highlight-dark);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  background-color: var(--secondary-salmon);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+header {
+  background-color: #f4ce14;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+form input, form button {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+button {
+  border-radius: 16px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 16pt;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary-yellow);
+  color: var(--highlight-dark);
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: var(--secondary-salmon);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
   }
 }
